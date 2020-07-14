@@ -1,0 +1,29 @@
+{
+  "name": "json-migrate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/app.js",
+  "files": [
+    "dist"
+  ],
+  "author": "Lev Eidelman Nagar <lev.eidelman.nagar@sapiens.com>",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint ./src --ext ts",
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "commander": "^5.1.0",
+    "consola": "^2.14.0",
+    "fs-extra": "^9.0.1"
+  }
+}
