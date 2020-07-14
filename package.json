@@ -4,8 +4,12 @@
   "license": "MIT",
   "main": "dist/app.js",
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
+  "bin": {
+    "migrate": "./bin/migrate.js"
+  },
   "author": "Lev Eidelman Nagar <lev.eidelman.nagar@sapiens.com>",
   "scripts": {
     "lint": "tsc --noEmit && eslint ./src --ext ts",
@@ -22,8 +26,14 @@
     "typescript": "^3.9.6"
   },
   "dependencies": {
+    "@types/common-tags": "^1.8.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node": "^14.0.23",
+    "change-case": "^4.1.1",
     "commander": "^5.1.0",
+    "common-tags": "^1.8.0",
     "consola": "^2.14.0",
+    "date-fns": "^2.14.0",
     "fs-extra": "^9.0.1"
   }
 }
