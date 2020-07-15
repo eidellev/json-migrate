@@ -1,11 +1,11 @@
 import fs from 'fs-extra';
 import { resolve } from 'path';
 import { CONFIG_FILE, Config } from '../constants';
-import logger from '../logger';
+import logger from '../utils/logger';
 
 const defaultConfig: Config = {
-  migrationsPath: './migrations',
-  dataPaths: ['./data'],
+  migrationsPath: 'migrations',
+  dataPaths: 'data/**.json',
 };
 
 export default async function init(): Promise<void> {

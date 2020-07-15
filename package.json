@@ -29,11 +29,15 @@
     "@types/common-tags": "^1.8.0",
     "@types/fs-extra": "^9.0.1",
     "@types/node": "^14.0.23",
+    "@types/require-dir": "^1.0.1",
+    "chalk": "^4.1.0",
     "change-case": "^4.1.1",
     "commander": "^5.1.0",
     "common-tags": "^1.8.0",
     "consola": "^2.14.0",
     "date-fns": "^2.14.0",
-    "fs-extra": "^9.0.1"
+    "fs-extra": "^9.0.1",
+    "globby": "^11.0.1",
+    "require-dir": "^1.2.0"
   }
 }
