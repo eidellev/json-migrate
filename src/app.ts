@@ -5,7 +5,7 @@ import run from './actions/run';
 import getPackageVersion from './utils/getPackageVersion';
 const command = new Command();
 
-command.name('json-migrate').version(getPackageVersion());
+command.name('migrate').version(getPackageVersion());
 
 command.command('init').description('Initialize json-migrate and generate default configuration').action(init);
 
