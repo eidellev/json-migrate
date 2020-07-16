@@ -9,10 +9,7 @@ command.name('json-migrate').version(getPackageVersion());
 
 command.command('init').description('Initialize json-migrate and generate default configuration').action(init);
 
-command
-  .command('new [name]')
-  .description('Initialize json-migrate and generate default configuration')
-  .action(newMigration);
+command.command('new [name]').description('Create a new migration script').action(newMigration);
 
 command.command('run').description('Run all migrations').action(run);
 

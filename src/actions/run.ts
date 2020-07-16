@@ -49,7 +49,7 @@ export default async function run(): Promise<void> {
       const originalData = await fs.readJson(filePath);
       const migratedData = migration(originalData);
 
-      await fs.writeJson(filePath, migratedData, { spaces: 2 });
+      await fs.writeJson(filePath, migratedData, { spaces: 4 });
       logger.success(`Migrated file ${chalk.bold.green(filePath)}\n`);
     }
 
