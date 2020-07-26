@@ -11,6 +11,10 @@ command.command('init').description('Initialize json-migrate and generate defaul
 
 command.command('new [name]').description('Create a new migration script').action(newMigration);
 
-command.command('run').description('Run all migrations').action(run);
+command
+  .command('run')
+  .description('Run all migrations')
+  .option('F, --fresh', 'Ignore history and re-run all migrations')
+  .action(run);
 
 command.parse(process.argv);

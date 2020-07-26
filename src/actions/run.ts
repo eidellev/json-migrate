@@ -7,7 +7,7 @@ import { HISTORY_FILE, Config } from '../constants';
 import getConfig from '../utils/getConfig';
 import logger from '../utils/logger';
 
-export default async function run(): Promise<void> {
+export default async function run({ fresh }: { fresh?: boolean }): Promise<void> {
   let config: Config;
 
   try {
@@ -32,7 +32,7 @@ export default async function run(): Promise<void> {
   const historyFilePath = resolve(migrationsPath, HISTORY_FILE);
   const historyFileExists = await fs.pathExists(historyFilePath);
 
-  if (!historyFileExists) {
+  if (!historyFileExists || fresh) {
     logger.debug('No history found');
     history = [];
   } else {

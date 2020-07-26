@@ -16,7 +16,7 @@ npm i @eidellev/json-migrate
 yarn add @eidellev/json-migrate
 ```
 
-## CLI Usage
+## Basic CLI Usage
 
 ```bash
 Usage: migrate [options] [command]
@@ -32,6 +32,18 @@ Commands:
   help [command]  display help for command
 ```
 
+## The `run` command
+
+```bash
+Usage: migrate run [options]
+
+Run all migrations
+
+Options:
+  F, --fresh  Ignore history and re-run all migrations
+  -h, --help  display help for command
+```
+
 ## Configuration
 
 ```json
@@ -43,6 +55,10 @@ Commands:
 
 - `migrationsPath (string)` - The directory where `json-migarte` will look for migration scripts.
 - `dataPaths (string or string array)` - Glob expression(s). Where `json-migrate` should look for data files.
+
+## Migrations history
+
+`json-migarte` will keep a list of migrations that had been previously run in `.migrations-history.json` and will not run the same migration again. If you wish re-run a specific migration, simply delete it from the file.
 
 ## Migration Script Example
 
