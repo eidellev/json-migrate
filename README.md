@@ -1,7 +1,5 @@
 # @eidellev/json-migrate
 
----
-
 A data migration tool for your `JSON` files.
 
 ## Installation
@@ -29,7 +27,7 @@ Options:
 
 Commands:
   init            Initialize json-migrate and generate default configuration
-  new [name]      Initialize json-migrate and generate default configuration
+  new [name]      Create a new migration script
   run             Run all migrations
   help [command]  display help for command
 ```

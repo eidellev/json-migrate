@@ -3,12 +3,20 @@ import fs from 'fs-extra';
 import requireDir from 'require-dir';
 import globby from 'globby';
 import chalk from 'chalk';
-import { HISTORY_FILE } from '../constants';
+import { HISTORY_FILE, Config } from '../constants';
 import getConfig from '../utils/getConfig';
 import logger from '../utils/logger';
 
 export default async function run(): Promise<void> {
-  const config = await getConfig();
+  let config: Config;
+
+  try {
+    config = await getConfig();
+  } catch {
+    logger.error('Could not load configurtion file. Make sure you run `migrate init` first.');
+    process.exit(1);
+  }
+
   const migrationsPath = resolve(process.cwd(), config.migrationsPath);
   const migrationsPathExists = await fs.pathExists(migrationsPath);
 
