@@ -53,12 +53,12 @@ Options:
 }
 ```
 
-- `migrationsPath (string)` - The directory where `json-migarte` will look for migration scripts.
+- `migrationsPath (string)` - The directory where `json-migrate` will look for migration scripts.
 - `dataPaths (string or string array)` - Glob expression(s). Where `json-migrate` should look for data files.
 
 ## Migrations history
 
-`json-migarte` will keep a list of migrations that had been previously run in `.migrations-history.json` and will not run the same migration again. If you wish re-run a specific migration, simply delete it from the file.
+`json-migrate` will keep a list of migrations that had been previously run in `.migrations-history.json` and will not run the same migration again. If you wish re-run a specific migration, simply delete it from the file.
 
 ## Migration Script Example
 
